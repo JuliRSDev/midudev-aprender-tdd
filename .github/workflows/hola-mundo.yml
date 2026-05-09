@@ -1,0 +1,16 @@
+name: "hola-mundo"
+
+on: [push] 
+  
+jobs:
+  build-hola-mundo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v6
+
+      - name: Imprimiendo mi hola mundo de mi archivo hola-mundo.js
+        run: hola-mundo.js
